@@ -10,10 +10,9 @@ function PLUGIN:SaveATM()
       v:GetPos(),
       v:GetAngles()
     }
-
-    ix.data.Set("atmMachines", data)
-
   end
+  
+  ix.data.Set("atmMachines", data)
 end
 
 function PLUGIN:LoadATM()
