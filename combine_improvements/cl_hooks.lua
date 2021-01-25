@@ -103,7 +103,12 @@ function PLUGIN:HUDPaint()
     draw.DrawText("BOL: \n" .. List, "BudgetLabel", ScrW() - 200, 30, Color(255, 255, 255), TEXT_ALIGN_LEFT, TEXT_ALIGN_LEFT)
     for client, char in ix.util.GetCharacters() do
       local bone = client:LookupBone("ValveBiped.Bip01_Head1")
-      local bonepos = client:GetBonePosition(bone) + Vector(0, 0, 14)
+      local bonepos
+      if bone then
+        bonepos = client:GetBonePosition(bone) + Vector(0, 0, 14)
+      else
+        bonepos = client:GetPos() + Vector(0, 0, 80)
+      end
       local ToScreen = bonepos:ToScreen()
       local distance = LocalPlayer():GetPos():Distance(bonepos)
       local CanSee = LocalPlayer():IsLineOfSightClear(client)
