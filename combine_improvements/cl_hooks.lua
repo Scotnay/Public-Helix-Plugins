@@ -139,7 +139,10 @@ function PLUGIN:HUDPaint()
           end
         end
       elseif char:GetFaction() == FACTION_MPF and client:Alive() and (client:GetMoveType() != MOVETYPE_NOCLIP) and client != LocalPlayer() then
-        local unitdigits = string.match(client:GetName(), self.Numbers) -- If you use city digits this won't work eg. i17:i5.UNION-241, unless you edit this line
+        local unitdigits = string.match(client:GetName(), self.Numbers)
+      --[[If you use city digits that are as long as ID digits this won't work eg. i17:i5.UNION-24,
+          unless you edit this line to be string.match(client:GetName(), self.Numbers, (num)), num being how many characters of the string to skip before searching
+          for my example the number would be 7, this is because 7 characters in is the . which is after the last unwanted number (5)]]
         local unitrank
         local division
 

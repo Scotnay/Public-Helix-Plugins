@@ -337,7 +337,7 @@ net.Receive("PrintCID",function(_, ply)
     local char = ply:GetCharacter()
     local inv = char:GetInventory()
 
-    inv:Add("id", 1, {
+    inv:Add("cid", 1, {
       owner_name = Citizen:GetName(),
       cid = CivChar:GetData("cid", "ERR NO CID"),
     })
