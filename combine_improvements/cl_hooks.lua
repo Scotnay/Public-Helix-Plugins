@@ -228,7 +228,7 @@ surface.CreateFont("BigLabel", {
 
 
 netstream.Hook("CitizenTerminalUse", function()
-  vgui.Create("ixCitizenTerminal")
+  vgui.Create("ixCitizenTerminal"):PopulateInfo()
 end)
 
 
