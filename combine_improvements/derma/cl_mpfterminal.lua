@@ -121,7 +121,9 @@ function PANEL:PopulateCitizens()
 
         if record != nil then
           for i, v in pairs(record) do
-            RecordList:AddLine(v.TYPE, v.REASON, v.POINTS)
+            if v.TYPE != nil then
+              RecordList:AddLine(v.TYPE, v.REASON, v.POINTS)
+            end
           end
         end
 
@@ -178,15 +180,19 @@ function PANEL:PopulateCitizens()
           local RecordType = Type:GetSelected()
           local Reason = TextInput:GetText()
           local Amount = Points:GetValue()
-          RecordList:AddLine(RecordType, Reason, Amount)
-          RecordInput:Close()
-          net.Start("Record")
-          net.WriteEntity(ply)
-          net.WriteString(RecordType)
-          net.WriteString(Reason)
-          net.WriteInt(Amount, 32)
-          net.SendToServer()
-          LocalPlayer():EmitSound("npc/roller/code2.wav")
+          if RecordType == nil or Reason == "" then
+            LocalPlayer():EmitSound("buttons/combine_button_locked.wav")
+          else
+            RecordList:AddLine(RecordType, Reason, Amount)
+            RecordInput:Close()
+            net.Start("Record")
+            net.WriteEntity(ply)
+            net.WriteString(RecordType)
+            net.WriteString(Reason)
+            net.WriteInt(Amount, 32)
+            net.SendToServer()
+            LocalPlayer():EmitSound("npc/roller/code2.wav")
+          end
         end
       end
 

@@ -62,7 +62,6 @@ function meta:GetRecord()
   if self:GetData("CombineRecord") then
     return self:GetData("CombineRecord")
   else
-    print("This player has no record data")
     return nil
   end
 end
