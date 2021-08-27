@@ -8,6 +8,9 @@ If there are any issues or you require help with setting up a plugin please feel
 
 # Combine Improvements
 
+WARNING:
+This plugin is pretty broken as it was one of my first releases, I am keeping it here for archival reasons but I do not recommend the use of this plugin.
+
 A set of improvements for Combine Factions in hl2rp the list of features include:
 - Citizen/Unit Manifest; this shows all currently active units as well as citizens.
 - New View Data; A new view data command and panel, the view data command only allows for someone to read and not edit data.
