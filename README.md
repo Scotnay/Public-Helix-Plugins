@@ -4,7 +4,12 @@ All my publicly available plugins for use in Nebulous Cloud's Helix Framework
 If there are any issues or you require help with setting up a plugin please feel free to contact me at Scotnay#4780 on discord.
 
 
+# Combine Improvements V2
 
+this is less of an updated version of Combine Improvements but instead a full on rewrite of the entire plugin. I wrote this plugin a while back and decided since I don't do Garry's mod stuff all that much anymore that I might as well release it so people have something better to use than my other buggy mess. Most of the features are the same but the citizen terminal was removed and a lot of the visuals were revamped. If you are already using Combine Improvements there is little to no backwards compatability from what I remember so if you are going to use this plugin then expect to have to redo how your server works in terms of running Combine.
+
+# Sanity
+Sanity is a simple system I wrote because I wanted to add some more random elements to the roleplay experience. It didn't turn out exactly as I wanted it to but I thought I'd release this semi-wip version for people to be able to use and modify if they so desire.
 
 # Combine Improvements
 
